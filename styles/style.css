@@ -10,13 +10,14 @@
 }
 
 .container{
-  width: 1280px;
+  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
 }
 
 header{
-  min-width: 1280px;
   width: 100%;
+  padding: 0 2%;
   height: 70px;
   background-color: #212343;
 }
@@ -30,7 +31,7 @@ header img{
 }
 
 section.container-banner{
-  min-width: 1280px;
+  padding: 0 2%;
   width: 100%;
   height: 557px;
   background-image: url(../images/header_bg.png);
@@ -44,9 +45,6 @@ section.container-banner > .container{
   text-align: right;
 }
 
-/*a altura 100% é herdada do elemento pai
-entao antes de colocar a altura 100% no elemento filho
-tem que colocar no elemento pai pra dar certo*/
 .form{
   display: inline-block;
   width: 400px;
@@ -138,8 +136,7 @@ tem que colocar no elemento pai pra dar certo*/
 }
 
 section.text-mid{
-  min-width: 1280px;
-  padding: 40px 0;
+  padding: 40px 2%;
   background-color: #ddd;
   text-align: center;
   height: 280px;
@@ -150,7 +147,8 @@ section.text-mid{
 }
 
 section.text-mid p{
-  width: 698px;
+  width: 100%;
+  max-width: 768px;
   display: inline-block;
   margin: 15px 0;
   text-align: justify;
@@ -166,7 +164,7 @@ section.text-mid p{
 }
 
 section.chamada-curriculo{
-  padding: 90px;
+  padding: 90px 2%;
 }
 
 section.chamada-curriculo h2{
@@ -197,6 +195,7 @@ section.chamada-curriculo h2{
 
 footer{
   padding: 20px 0;
+  width: 100%;
   position: relative;
   bottom: 0;
   text-align: center;
@@ -206,6 +205,64 @@ footer{
 
 footer p{
   margin-top: 8px;
+}
+
+@media screen and (max-width: 1024px){
+  header{
+    width: 100%;
+    padding: 23px 0;
+    text-align: center;
+  }
+
+  header img{
+    margin: 0;
+  }
+
+  section.container-banner{
+    padding: 40px 2%;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  section.container-banner > .container{
+    text-align: center;
+  }
+
+  .form{
+    display: inline-block;
+    margin-top: 30px;
+    margin-right: -4px;
+    width: 90%;
+    max-width: 400px;
+    height: 100%;
+    top: 0;
+    padding: 15px;
+    align-items: center;
+  }
+  
+  .form input[type="submit"]{
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .container-list{
+    display: inline-block;
+    padding: 30px 0;
+    margin-top: 0;
+    margin-right: -4px;
+    text-align: center;
+    float: none;
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  .container-single{
+    float: none;
+    width: 100%;
+    padding: 30px;
+  }
 }
 
 

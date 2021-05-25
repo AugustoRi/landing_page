@@ -139,7 +139,8 @@ section.text-mid{
   padding: 40px 2%;
   background-color: #ddd;
   text-align: center;
-  height: 280px;
+  height: auto;
+  position: relative;
 }
 
 .container h2{
@@ -159,8 +160,10 @@ section.text-mid p{
   height: 64px;
   background-image: url(../images/arrow.png);
   margin: 0 auto;
-  position: relative;
-  top: 15px;
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 section.chamada-curriculo{
@@ -205,6 +208,17 @@ footer{
 
 footer p{
   margin-top: 8px;
+}
+
+
+@media screen and (max-width: 768px){
+  .arrow{
+    bottom: -8%;
+  }
+
+  .container-single p{
+    padding: 10px 0;
+  }
 }
 
 @media screen and (max-width: 1024px){
